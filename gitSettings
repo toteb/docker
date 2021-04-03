@@ -1,0 +1,8 @@
+git init
+git add -A
+git commit -m 'Docker Project'
+git remote add origin https://github.com/toteb/docker.git
+git remote set-url origin https://github.com/toteb/docker.git
+git push -u -f origin master
+git pull --rebase
+git push
