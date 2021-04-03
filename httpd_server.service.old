@@ -1,0 +1,12 @@
+[Unit]
+Description=httpd Container Service
+Wants=syslog.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/podman start -a httpd_server
+ExecStop=/usr/bin/podman -t 2 httpd_server
+
+[Install]
+WantedBy=multi-user.target
+
